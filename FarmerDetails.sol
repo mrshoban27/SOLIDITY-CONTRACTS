@@ -26,7 +26,7 @@ contract StructStorage {
 		
 	}
 
-    function getBalance(address addr) returns(uint) {
+    function getBalance(address addr)public view returns(uint) {
 		return balances[addr];
 	}
 struct farmer {
