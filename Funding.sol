@@ -26,7 +26,7 @@ contract Funding1{
      string[] add1;
      string[] add2;
      uint[] add3;
-    // details[] add1;
+    
      function Registration(address _address,string _name,string _Email)public {
         
         require(account[_address].exists==false);
@@ -37,12 +37,7 @@ contract Funding1{
          account[_address].Email=_Email;
          account[_address].amount=_address.balance;
          add.push(_address);
-         
-         /*add1.push(_name);
-         add2.push(_Email);*/
-         //details.push(_name);
-       //  details.push(_Email);
-       
+   
      }
      function userexists(address _address)internal{
      account[_address].exists=true;
