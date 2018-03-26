@@ -28,7 +28,7 @@ contract mycontract{
     }
     function register(address _address,uint _ReferenceCode )payable public returns(uint){
        
-        if(ReferenceCode==0){
+        if(_ReferenceCode==0){
              if(add[_address].exists==false){
         add[_address].studentid=_address;
         add[_address].amount=msg.value;
@@ -42,7 +42,7 @@ contract mycontract{
             else
             throw;
         }
-        else if(ReferenceCode>0){
+        else if(_ReferenceCode>0){
              if(add[_address].exists==false){
          for(uint i=0;i<store.length;i++){
             if(ReferenceCode==store[i]){
